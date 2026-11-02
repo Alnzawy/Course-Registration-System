@@ -1,0 +1,126 @@
+
+
+/* General reset and body styling */
+* { padding: 0; margin: 0; box-sizing: border-box; }
+body {
+    background-color: #f4f6f9; /* Light background to match the dashboard */
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+}
+
+/* Centered Background container with shapes */
+.background {
+    width: 450px;
+    height: 550px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape {
+    height: 220px;
+    width: 220px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+form {
+    height: 550px;
+    width: 420px;
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 60px 40px;
+}
+form * {
+    font-family: 'Poppins', sans-serif;
+    color: #333333; /* Dark text color for readability */
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h3 {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    color: #4e73df; /* Primary color matching the dashboard */
+}
+
+/* Label and input styling */
+label {
+    display: block;
+    margin-top: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666666;
+}
+input {
+    display: block;
+    height: 45px;
+    width: 100%;
+    background-color: #f9f9f9; /* Light input background */
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 400;
+}
+input:focus {
+    border: 1px solid #4e73df; /* Border highlight on focus */
+}
+
+/* Checkbox styling */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.checkbox-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+.checkbox-container label {
+    color: #333333;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* Placeholder color */
+::placeholder {
+    color: #a0a0a0;
+}
+
+/* Submit button styling */
+button {
+    margin-top: 40px;
+    width: 100%;
+    background-color: #4e73df; /* Primary color matching the dashboard */
+    color: #ffffff;
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #3d62d0; /* Darken on hover */
+}
+
+/* Message box styling */
+.message-box {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+

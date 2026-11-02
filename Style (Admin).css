@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    display: flex;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #111827;
+    color: #fff;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar ul li a:hover {
+    color: #4f46e5;
+}
+
+.sidebar ul li a .dropdown-arrow {
+    margin-left: auto;
+}
+
+.submenu {
+    display: none;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.submenu li {
+    margin: 10px 0;
+}
+
+.submenu li a {
+    font-size: 14px;
+    color: #a0aec0;
+}
+
+.submenu li a:hover {
+    color: #4f46e5;
+}
+
+.active > .submenu {
+    display: block;
+}
+
+/* Main content */
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+    width: calc(100% - 270px);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #4f46e5;
+    color: white;
+    cursor: pointer;
+}
+
+th a {
+    color: white;
+    text-decoration: none;
+}
+
+th a:hover {
+    color: #ccc;
+}
+
+/* Filter Form Styling */
+.filters {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.filters select, .filters input[type="submit"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.filters label {
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.filters input[type="submit"] {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.filters input[type="submit"]:hover {
+    background-color: #3b82f6;
+}
+
+
+/* Calendar Styles */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 40px;
+}
+
+.calendar .day {
+    padding: 15px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.calendar .day.current-day {
+    background-color: #4f46e5;
+    color: white;
+}
+
+.calendar .day:hover {
+    background-color: #4f46e5;
+    color: white;
+}
+
+/* Admin Profile Styles */
+.admin-profile {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    width: 100%;
+}
+
+.admin-profile h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.admin-profile label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.admin-profile input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.admin-profile button {
+    background-color: #4f46e5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.admin-profile button:hover {
+    background-color: #3b82f6;
+}
+
+/* Dashboard Styles */
+.dashboard-container {
+    margin-left: 270px;
+    padding: 40px;
+    width: calc(100% - 270px);
+}
+
+.dashboard-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.card .icon {
+    font-size: 30px;
+    color: #4f46e5;
+    margin-bottom: 15px;
+}
+
+.card .number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card .title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #666;
+}
+#CreateSections {
+    background-color: #e54646; /* Red background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor */
+    padding: 10px 20px; /* Add some padding */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Adjust font size */
+}
+
+#CreateSections:hover {
+    background-color: #c43e3e; /* Darker red on hover */
+}
+
+/* General reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+header {
+    background-color: #4caf50;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    background-color: #66bb6a;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #388e3c;
+}
+
+main {
+    margin: 50px;
+    text-align: center;
+}
+
+.content {
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+

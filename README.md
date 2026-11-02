@@ -6,24 +6,27 @@ The system automates course scheduling and registration, helping administrators 
 
 ## Table of Contents
 
-- [Project Information](#project-information)
-- [Abstract](#abstract)
-- [Problem Statement](#problem-statement)
-- [Objectives](#objectives)
-- [Main Features](#main-features)
-- [User Roles](#user-roles)
-- [System Requirements](#system-requirements)
-- [Technologies and Development Environment](#technologies-and-development-environment)
-- [System Architecture](#system-architecture)
-- [Database Design](#database-design)
-- [Scheduling Logic](#scheduling-logic)
-- [System Diagrams](#system-diagrams)
-- [Application Interfaces](#application-interfaces)
-- [Error Handling](#error-handling)
-- [Challenges and Solutions](#challenges-and-solutions)
-- [Limitations and Future Enhancements](#limitations-and-future-enhancements)
-- [Team Members and Work Distribution](#team-members-and-work-distribution)
-- [Supervisor](#supervisor)
+1. [Abstract](#abstract)
+2. [Problem Statement](#problem-statement)
+3. [Objectives](#objectives)
+4. [Main Features](#main-features)
+5. [User Roles](#user-roles)
+6. [System Requirements](#system-requirements)
+7. [Technologies and Development Environment](#technologies-and-development-environment)
+8. [System Architecture](#system-architecture)
+9. [Database Design](#database-design)
+10. [Scheduling Logic](#scheduling-logic)
+11. [System Diagrams](#system-diagrams)
+12. [Application Interfaces](#application-interfaces)
+    - [Login Interface](#1-login-interface)
+    - [Admin Interface](#2-admin-interface)
+    - [Doctor Interface](#3-doctor-interface)
+    - [Student Interface](#4-student-interface)
+13. [Error Handling](#error-handling)
+14. [Challenges and Solutions](#challenges-and-solutions)
+15. [Testing and Simulation Environment](#testing-and-simulation-environment)
+16. [Limitations and Future Enhancements](#limitations-and-future-enhancements)
+
 
 ## Abstract
 
@@ -96,12 +99,10 @@ The main objectives of this project are:
 
 ## User Roles
 
-The system supports three main roles:
-
 ### Admin
+
 The administrator is responsible for managing the overall scheduling and registration process.
 
-Main functionalities:
 - View dashboard statistics.
 - Manage students.
 - Manage faculty members.
@@ -112,19 +113,19 @@ Main functionalities:
 - View enrolled students in sections.
 
 ### Doctor (Faculty Member)
+
 Faculty members can manage their teaching preferences and view their assigned academic information.
 
-Main functionalities:
 - View the faculty dashboard.
-- Select preferred courses to teach.
+- Select preferred courses.
 - View personal timetable.
 - View assigned sections.
 - View lists of enrolled students.
 
 ### Student
+
 Students can manage their course registration and view their academic schedules.
 
-Main functionalities:
 - View the student dashboard.
 - View academic plans.
 - View personal timetables.
@@ -210,8 +211,6 @@ The database contains the following main tables:
 
 One of the main challenges of the system is automatically assigning classrooms and time slots without conflicts.
 
-The scheduling process considers the following factors:
-
 ### 1. Section Creation
 - Identify students eligible for each course.
 - Consider academic levels and completed prerequisites.
@@ -244,66 +243,135 @@ Before assigning a section, the system checks these structures to identify avail
 
 ## System Diagrams
 
-The project includes three main diagrams for modeling the system:
+The project includes three diagrams for modeling the system.
 
 ### Entity-Relationship (ER) Diagram
+
 Illustrates the database entities, attributes, and relationships between tables.
 
+![ER Diagram](ER%20diagram.png)
+
 ### Class Diagram
+
 Represents the main system classes and their relationships.
 
+![Class Diagram](Class%20Diagram.png)
+
 ### Use Case Diagram
+
 Illustrates the interactions between the Admin, Doctor, and Student roles and the system's functionalities.
 
-> Upload the corresponding diagram images to your repository and add them here.
+![Use Case Diagram](Use%20case%20diagram.png)
 
 ## Application Interfaces
 
 The system provides separate interfaces for administrators, faculty members, and students.
 
 ### 1. Login Interface
+
 Users enter their username or ID and password. The system validates their credentials and redirects them according to their role.
 
-### 2. Admin Dashboard
-The admin dashboard provides an overview of the system, including:
-- Total students.
-- Total classrooms.
-- Total faculty members.
-- Total courses.
-- Total sections.
+![Login Page](Login%20page.png)
 
-Administrators can use the sidebar to access detailed management pages.
+### 2. Admin Interface
 
-### 3. Admin Management Interfaces
+The admin interface provides an overview of the system and access to its management functions.
 
-The administrator can access the following management pages:
+**Admin Dashboard**
 
-- **Section Management:** View created sections and enrolled students.
-- **Course Management:** View courses and their information.
-- **Room Management:** View classrooms and their details.
-- **Student Management:** View student records.
-- **Faculty Management:** View faculty member information.
-- **Section Creation:** Generate sections based on eligible students and assign suitable rooms and time slots.
+![Admin Interface](Admin%20Interface.png)
 
-### 4. Doctor Dashboard
+**Course List**
 
-Faculty members can:
-- View their course preferences.
-- Select preferred courses.
-- View their teaching timetable.
-- View assigned sections.
-- Access the list of enrolled students.
+![Course List](Course%20List.png)
 
-### 5. Student Dashboard
+**Course List and Section Creation**
 
-Students can:
-- View their academic plan.
-- View their timetable.
-- View registered sections.
-- Browse available sections for registration.
-- Change registered sections.
-- View available sections for courses above their current academic level.
-- Drop eligible sections.
+![Course List and Section Creation](Course%20List%20%26%20Section%20Creation.png)
+
+**Student List**
+
+![Student List](Student%20List.png)
+
+**Doctor List**
+
+![Doctor List](Doctor%20List.png)
+
+**Room List**
+
+![Room List](Room%20List.png)
+
+**Sections List**
+
+![Sections List](Sections%20List.png)
+
+**Section Details**
+
+![Section Details](Section%20details.png)
+
+**Assign Doctors**
+
+![Assign Doctors](Assign%20Doctors.png)
+
+**Assign Sections to Students**
+
+![Assign Sections to Students](Assign%20Sections%20to%20Students.png)
+
+**Assign Times and Rooms**
+
+![Assign Times and Rooms](Assign%20Times%20%26%20Rooms.png)
+
+### 3. Doctor Interface
+
+Faculty members can view their preferences, teaching timetable, assigned sections, and enrolled students.
+
+**Doctor Dashboard**
+
+![Doctor Interface](Doctor%20Interface.png)
+
+**Doctor Timetable**
+
+![Timetable for Doctor](Timetable%20for%20Doctor.png)
+
+**Assigned Sections List**
+
+![Sections List Assigned for a Doctor](Section%20Lists%20assigned%20for%20a%20doctor.png)
+
+**Section Details and Enrolled Students**
+
+![Section Details for Doctor](Section%20Details%20for%20doctor.png)
+
+### 4. Student Interface
+
+Students can view their academic information and manage their course registrations.
+
+**Student Dashboard**
+
+![Student Dashboard](Student%20Dashboard.png)
+
+**Student Academic Plan**
+
+![Student Plan](Student%20Plan.png)
+
+**Student Timetable**
+
+![Student Timetable](Student%20Timetable.png)
+
+**Registered Sections**
+
+![Registered Section for Student](Registered%20section%20for%20Student.png)
+
+**Available Sections for Changing Registered Courses**
+
+![Available Sections for Changing Registered Courses](Available%20Sections%20for%20Changing%20Registered%20Courses%20for%20the%20student.png)
+
+**Available Sections to Drop Above Student Level**
+
+![Available Sections to Drop Above Student Level](Available%20Sections%20to%20Drop%20Above%20Student%20level.png)
+
+**Available Sections to Register Above Student Level**
+
+![Available Sections to Register Above Student Level](Available%20Sections%20to%20Register%20Above%20Student%20level.png)
 
 ## Error Handling
 
@@ -360,8 +428,6 @@ Development and implementation were carried out using Visual Studio Code.
 
 ## Limitations and Future Enhancements
 
-Although the system provides automated scheduling and course registration functionality, several improvements can be considered.
-
 ### Current Limitations
 
 - Limited flexibility for complex faculty scheduling preferences.
@@ -381,5 +447,4 @@ Although the system provides automated scheduling and course registration functi
 
 
 
-- Helped ensure that project requirements were addressed.
 
